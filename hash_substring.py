@@ -25,8 +25,11 @@ def read_input():
         # print("i got to F") <--- debug, issue after this
         try:
             filepath = input()
+            print("cmd1 pass")
             filepath = "tests/" + filepath
+            print("cmd1 pass")
             file = open(filepath, "r")
+            print("cmd1 pass")
             firstline = file.readline().strip()
             print(firstline)
             secondline = file.readline().strip()
