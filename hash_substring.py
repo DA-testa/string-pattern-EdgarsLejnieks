@@ -10,7 +10,8 @@ def read_input():
     inputtype = input()
     inputtype = inputtype.strip()
 
-    if inputtype == "I":
+    #if inputtype == "I":
+    if "I" in inputtype:
         try:
             firstline = input().rstrip()
             secondline = input().rstrip()
@@ -19,7 +20,8 @@ def read_input():
         except IOError as e:
             print(e)
 
-    if inputtype == "F":
+    #if inputtype == "F":
+    if "F" in inputtype:
         try:
             filepath = input()
             filepath = "tests/" + filepath
@@ -66,4 +68,3 @@ def get_occurrences(pattern, text):
 # this part launches the functions
 if __name__ == '__main__':
     print_occurrences(get_occurrences(*read_input()))
-
