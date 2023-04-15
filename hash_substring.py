@@ -22,6 +22,7 @@ def read_input():
 
     #if inputtype == "F":
     if "F" in inputtype:
+        print("i got to F")
         try:
             filepath = input()
             filepath = "tests/" + filepath
@@ -30,6 +31,7 @@ def read_input():
             secondline = file.readline().strip()
             file.close()
             #line_list = [firstline,secondline]
+            print("i have returned vals")
             return firstline, secondline
         except EOFError as e:
             print(e)
@@ -62,6 +64,7 @@ def get_occurrences(pattern, text):
         if activePatternHash == PATTERN_HASH:
             zeroBasedMatches.append(i)
     # and return an iterable variable
+    print("am returning matches")
     return zeroBasedMatches
 
 
