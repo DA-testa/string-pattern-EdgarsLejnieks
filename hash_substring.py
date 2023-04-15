@@ -55,7 +55,7 @@ def print_occurrences(output):
 def get_occurrences(pattern, text):
     # this function should find the occurances using Rabin Karp alghoritm 
     PATTERN_HASH = hash(pattern)
-    ITERABLE_RANGE = len(text)-len(pattern)
+    ITERABLE_RANGE = len(text)-len(pattern)+1
     zeroBasedMatches = []
     for i in range(ITERABLE_RANGE):
         activePatternHash = hash(text[i:len(pattern)+i])
