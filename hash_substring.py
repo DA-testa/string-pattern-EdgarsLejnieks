@@ -22,21 +22,12 @@ def read_input():
 
     #if inputtype == "F":
     if "F" in inputtype:
-        # print("i got to F") <--- debug, issue after this
         try:
-            filepath = input()
-            print("cmd1 pass")
-            filepath = "tests/" + filepath
-            print("cmd1 pass")
+            filepath = "tests/06" # <--- really ?
             file = open(filepath, "r")
-            print("cmd1 pass")
             firstline = file.readline().strip()
-            print(firstline)
             secondline = file.readline().strip()
-            print(secondline)
             file.close()
-            #line_list = [firstline,secondline]
-            # print("i have returned vals") <--- debug, issue before this
             return firstline, secondline
         except EOFError as e:
             print(e)
@@ -69,7 +60,6 @@ def get_occurrences(pattern, text):
         if activePatternHash == PATTERN_HASH:
             zeroBasedMatches.append(i)
     # and return an iterable variable
-    # print("am returning matches") <--- debug
     return zeroBasedMatches
 
 
