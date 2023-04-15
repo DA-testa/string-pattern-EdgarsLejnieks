@@ -15,8 +15,8 @@ def read_input():
         try:
             firstline = input().strip()
             secondline = input().strip()
-            line_list = [firstline, secondline]
-            return line_list
+            #line_list = [firstline, secondline]
+            return firstline, secondline
         except IOError as e:
             print(e)
 
@@ -29,8 +29,8 @@ def read_input():
             firstline = file.readline().strip()
             secondline = file.readline().strip()
             file.close()
-            line_list = [firstline,secondline]
-            return line_list
+            #line_list = [firstline,secondline]
+            return firstline, secondline
         except EOFError as e:
             print(e)
 
@@ -67,4 +67,4 @@ def get_occurrences(pattern, text):
 
 # this part launches the functions
 if __name__ == '__main__':
-    print_occurrences(get_occurrences(*read_input()))
+    print_occurrences(get_occurrences(read_input()[0],read_input()[1]))
