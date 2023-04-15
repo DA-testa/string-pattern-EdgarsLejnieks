@@ -13,8 +13,8 @@ def read_input():
     #if inputtype == "I":
     if "I" in inputtype:
         try:
-            firstline = input()#.rstrip()
-            secondline = input()#.rstrip()
+            firstline = input().strip()
+            secondline = input().strip()
             line_list = [firstline, secondline]
             return line_list
         except IOError as e:
@@ -26,8 +26,8 @@ def read_input():
             filepath = input()
             filepath = "tests/" + filepath
             file = open(filepath, "r")
-            firstline = file.readline()#.rstrip()
-            secondline = file.readline()#.rstrip()
+            firstline = file.readline().strip()
+            secondline = file.readline().strip()
             file.close()
             line_list = [firstline,secondline]
             return line_list
